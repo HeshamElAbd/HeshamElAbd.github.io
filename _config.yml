@@ -18,10 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "Bioinformatics.AI(device=CUDA)"
+title: "Hesham ElAbd"
 email: h.elabd@ikmb.uni-kiel.de
 description: >- # this means to ignore newlines until "baseurl:"
-  Blogging about AI Algorithms and tools with specific emphasis on the applications of AI in Bioinformatics   
+  Random thoughts, well, it depend upon how you defined randomness, aha well\
+   here you going to find my expressing my thoughts about AI Algorithms, coding,\
+   philosophy, bioinformatics, or software development. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: HeshamElAbd16
