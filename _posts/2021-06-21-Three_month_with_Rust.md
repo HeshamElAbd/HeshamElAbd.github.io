@@ -16,6 +16,7 @@ fn main()
     let x="Hello world"; // rust deducing the type automatically
     assert_eq!(x,y)
 }
+{% endhighlight %}
 
 2- Cosies and clear syntax using iterators
 {% highlight rust %}
@@ -27,6 +28,7 @@ fn main()
                 .sum::<i32>();
     println!("The sum of square for even numbers is : {}",test_code); 
 }
+{% endhighlight %}
 
 3- Out of the box support for parallel coding using Ray  
 
@@ -39,3 +41,41 @@ fn main()
                 .collect::<Vec<i32>>();
     println!("The resulting vector is : {}",test_code);
 }
+{% endhighlight %}
+
+4- Build-in support for unit testing
+
+{% highlight rust %}
+use rayon::prelude::*
+
+fn add_one(vec_int:&mut Vec<String>)
+{
+    for e in vec_int.iter_mut()
+    {
+        *e+=1
+    }
+}
+
+fn main()
+{
+    let test_code=vec![1,2,3,4,5,6,7,8,9];
+    add_one(test_code);
+    println!("The resulting vector is : {}",test_code);
+}
+
+#[cfg(test)]
+mod unit_testing
+{
+    fn test_add_one()
+    {
+        let test_case=vec![1,2,3,4,5];
+        let test_case_copy=test_case.clone();
+        let test_res=add_one(&mut test_case_copy);
+        for idx in 0..test_case.len()
+        {
+            assert_eq!(test_case[idx]+1,test_res[idx])
+        }
+    }
+}
+{% endhighlight %}
+AS I am still learning and discovering more features in language I might come back to edit the post. 
