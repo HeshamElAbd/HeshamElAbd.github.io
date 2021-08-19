@@ -66,9 +66,9 @@ mod unit_testing
     fn test_add_one()
     {
         let test_case=vec![1,2,3,4,5];
-        let test_case_copy=test_case.clone(); 
+        let test_case_copy=test_case.clone();
         let test_res=add_one(&mut test_case_copy);
-        for idx in 0..test_case
+        for idx in 0..test_case.len()
         {
             assert_eq!(test_case[idx]+1,test_res[idx])
         }
